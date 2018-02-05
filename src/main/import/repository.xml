@@ -8,14 +8,14 @@
                            j:title="trainingTamplateSet"
                            jcr:mixinTypes="jmix:hasExternalProviderExtension"
                            jcr:primaryType="jnt:module">
-                <sources jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                <sources jcr:mixinTypes="jmix:hasExternalProviderExtension jmix:sourceControl"
                   jcr:primaryType="jnt:moduleVersionFolder"
                   j:staticMountPointProviderKey="module-trainingtamplateset-1.0-SNAPSHOT">
-                    <src jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                    <src jcr:mixinTypes="jmix:hasExternalProviderExtension jmix:sourceControl"
                  jcr:primaryType="jnt:folder">
-                        <main jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                        <main jcr:mixinTypes="jmix:hasExternalProviderExtension jmix:sourceControl"
                      jcr:primaryType="jnt:folder">
-                            <resources jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                            <resources jcr:mixinTypes="jmix:hasExternalProviderExtension jmix:sourceControl"
                              jcr:primaryType="jnt:folder">
                                 <jnt_template jcr:mixinTypes="jmix:hasExternalProviderExtension"
                                    jcr:primaryType="jnt:nodeTypeFolder">
@@ -24,6 +24,10 @@
                                         <template.error_401.jsp jcr:primaryType="jnt:viewFile"/>
                                     </html>
                                 </jnt_template>
+                                <errors jcr:mixinTypes="jmix:hasExternalProviderExtension jmix:sourceControl"
+                             jcr:primaryType="jnt:folder">
+                                    <error_401.jsp jcr:mixinTypes="jmix:sourceControl" jcr:primaryType="jnt:viewFile"/>
+                                </errors>
                             </resources>
                         </main>
                     </src>
@@ -33,46 +37,26 @@
                 <files jcr:primaryType="jnt:folder"/>
                 <contents jcr:primaryType="jnt:contentFolder"/>
                 <templates jcr:primaryType="jnt:templatesFolder">
-                    <files jcr:primaryType="jnt:folder">
-                        <themes jcr:primaryType="jnt:folder">
-                            <default jcr:primaryType="jnt:folder"/>
-                        </themes>
-                    </files>
+                    <files jcr:primaryType="jnt:folder"/>
                     <contents jcr:primaryType="jnt:contentFolder"/>
-                    <base j:theme="/modules/trainingtamplateset/templates/files/themes/default"
-                  j:view="trainingtamplateset"
-                  jcr:mixinTypes="jmix:theme"
-                  jcr:primaryType="jnt:template">
-                        <home jcr:primaryType="jnt:pageTemplate"/>
-                        <simple jcr:primaryType="jnt:pageTemplate"/>
-                        <err j:hiddenTemplate="false"
-                    j:view="error_401"
+                    <simple j:hiddenTemplate="false"
+                    j:view="default"
                     jcr:primaryType="jnt:pageTemplate">
-                            <j:translation_en jcr:language="en"
-                                    jcr:mixinTypes="mix:title"
-                                    jcr:primaryType="jnt:translation"
-                                    jcr:title="error_401"/>
-                        </err>
-                    </base>
-                    <content-template j:applyOn="jnt:content"
-                              j:hiddenTemplate="true"
-                              j:priority="1"
-                              j:view="trainingtamplateset"
-                              jcr:primaryType="jnt:contentTemplate">
-                        <pagecontent jcr:primaryType="jnt:contentList">
-                            <main-resource-display j:mainResourceView="default" jcr:primaryType="jnt:mainResourceDisplay"/>
-                        </pagecontent>
-                    </content-template>
+                        <j:translation_en jcr:language="en"
+                                 jcr:mixinTypes="mix:title"
+                                 jcr:primaryType="jnt:translation"
+                                 jcr:title="simple"/>
+                    </simple>
+                    <home j:hiddenTemplate="false"
+                  j:view="default"
+                  jcr:primaryType="jnt:pageTemplate">
+                        <j:translation_en jcr:language="en"
+                                 jcr:mixinTypes="mix:title"
+                                 jcr:primaryType="jnt:translation"
+                                 jcr:title="home"/>
+                    </home>
                 </templates>
                 
-                <home j:isHomePage="true"
-               j:templateName="home"
-               jcr:primaryType="jnt:page">
-                    <j:translation_en jcr:language="en"
-                              jcr:mixinTypes="mix:title"
-                              jcr:primaryType="jnt:translation"
-                              jcr:title="Home"/>
-                </home>
             </trainingtamplateset>
     </modules>
 </content>
