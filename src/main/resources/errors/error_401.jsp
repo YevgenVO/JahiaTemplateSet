@@ -23,7 +23,7 @@
 
 
 <script>
-    window.location.replace(window.location.host + "/sites/mySite/home/login.html");
+    window.location.replace(window.location.host + "${renderContext.site.path}/home/login.html");
 </script>
 </body>
 </html>
